@@ -644,8 +644,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: ALMAPLUS_Engine(3_2)
-  metroPackageVersion: 
+  metroPackageName: ALMAPLUSEngine32
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -653,7 +653,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: ALMAPLUS_Engine(3_2)
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: ALMAPLUS_Engine(3_2)
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

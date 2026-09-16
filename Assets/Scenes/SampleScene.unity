@@ -452,6 +452,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1113062629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1113062630}
+  - component: {fileID: 1113062631}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1113062630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113062629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1113062631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113062629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2498ca7b6eb6246b737fee15c34468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestCode
 --- !u!1 &1524963689
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +506,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1524963691}
   - component: {fileID: 1524963690}
-  - component: {fileID: 1524963694}
   - component: {fileID: 1524963693}
   - component: {fileID: 1524963692}
   m_Layer: 0
@@ -610,18 +653,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &1524963694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524963689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb2498ca7b6eb6246b737fee15c34468, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestCode
 --- !u!1 &1818927002
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,3 +829,4 @@ SceneRoots:
   - {fileID: 1524963691}
   - {fileID: 1818927004}
   - {fileID: 58159273}
+  - {fileID: 1113062630}

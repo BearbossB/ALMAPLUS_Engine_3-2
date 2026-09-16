@@ -2,9 +2,16 @@ using UnityEngine;
 
 public class TestCode : MonoBehaviour
 {
+    int a;
+    string name;
     void Start()
     {
-        Debug.Log("Hello World!");
+        a = 1;
+        name = "ALMAPLUS+";
+
+        Debug.Log(a);
+        Debug.Log(name);
+        //Debug.Log("Hello World!");
     }
 
     void Update()
