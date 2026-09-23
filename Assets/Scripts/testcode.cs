@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class TestCode : MonoBehaviour
 {
-    int a;
-    string name;
+    int one = 1;
+    char a = 'a';
+    string myname = "ALMAPLUS";
+
+    bool booltrue = true;
+    bool boolfalse = false;
+
+    object anything = true;
+
     void Start()
     {
-        a = 1;
-        name = "ALMAPLUS+";
-
+        Debug.Log(one);
         Debug.Log(a);
-        Debug.Log(name);
+        Debug.Log(myname);
+        Debug.Log(booltrue);
+        Debug.Log(boolfalse);
+        Debug.Log(anything);
         //Debug.Log("Hello World!");
     }
 
