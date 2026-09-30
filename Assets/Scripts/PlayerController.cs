@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
 
     public float playerSpeed = 5f;
 
+    int[] scores = new int[5];
+
     void Start()
     {
         //bool a = true;
@@ -20,19 +22,31 @@ public class PlayerController : MonoBehaviour
 
         //Debug.Log(playerPos.x);
         //Debug.Log(playerPos.y);
+
+        for (int i = 0; i < scores.Length; i++)
+        {
+            scores[i] = (i + 1) * 10;
+            Debug.Log(scores[i]);
+        }
     }
 
     void Update()
     {
-        float moveX = 0f;
-        float moveY = 0f;
+        //float moveX = 0f;
+        //float moveY = 0f;
 
-        if (Input.GetKey(KeyCode.RightArrow)) moveX = 1f;
-        if (Input.GetKey(KeyCode.LeftArrow)) moveX = -1f;
-        if (Input.GetKey(KeyCode.UpArrow)) moveY = 1f;
-        if (Input.GetKey(KeyCode.DownArrow)) moveY = -1f;
+        //if (Input.GetKey(KeyCode.RightArrow)) moveX = 1f;
+        //if (Input.GetKey(KeyCode.LeftArrow)) moveX = -1f;
+        //if (Input.GetKey(KeyCode.UpArrow)) moveY = 1f;
+        //if (Input.GetKey(KeyCode.DownArrow)) moveY = -1f;
 
-        Vector3 move = new Vector3(moveX, moveY, 0f);
-        transform.position += move * playerSpeed * Time.deltaTime;
+        //Vector3 move = new Vector3(moveX, moveY, 0f);
+        //transform.position += move * playerSpeed * Time.deltaTime;
+
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+
+        Vector3 direction = new Vector3(x, y, 0);
+        transform.position += direction.normalized * playerSpeed * Time.deltaTime;
     }
 }
