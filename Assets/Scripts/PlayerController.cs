@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     public float playerSpeed = 5f;
+    public GameObject PlayerBullet;
+    public float BulletSpeed;
 
-    int[] scores = new int[5];
+    //int[] scores = new int[5];
 
     void Start()
     {
@@ -23,11 +24,11 @@ public class PlayerController : MonoBehaviour
         //Debug.Log(playerPos.x);
         //Debug.Log(playerPos.y);
 
-        for (int i = 0; i < scores.Length; i++)
-        {
-            scores[i] = (i + 1) * 10;
-            Debug.Log(scores[i]);
-        }
+    //    for (int i = 0; i < scores.Length; i++)
+    //    {
+    //        scores[i] = (i + 1) * 10;
+    //        Debug.Log(scores[i]);
+    //    }
     }
 
     void Update()
@@ -48,5 +49,18 @@ public class PlayerController : MonoBehaviour
 
         Vector3 direction = new Vector3(x, y, 0);
         transform.position += direction.normalized * playerSpeed * Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            for(int i = 0; i < 3; i++)
+            {
+                GameObject Bullet = Instantiate(PlayerBullet);
+                Vector3 bulletPos = transform.position;
+                bulletPos.y += 0.3f * i;
+                Bullet.transform.position = bulletPos;
+                Bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up*BulletSpeed);
+            }
+          
+        }
     }
 }
