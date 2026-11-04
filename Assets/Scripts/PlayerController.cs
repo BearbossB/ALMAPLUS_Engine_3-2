@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            for(int i = 0; i < 3; i++)
+            for(int i = 0; i < 1; i++)
             {
                 GameObject Bullet = Instantiate(PlayerBullet);
                 Vector3 bulletPos = transform.position;
