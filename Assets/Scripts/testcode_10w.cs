@@ -88,11 +88,18 @@ public class testcode_10w : MonoBehaviour
 
         void Start()
         {
-            Adult maria = new Adult("Alice", 10, 140f);
-            maria.Age = 12;
-            maria.SetBaseAge(2);
-            Debug.Log(maria.Age);
-            Debug.Log(maria.GetBaseAge()); //작동안함
+            Human Maria = new Adult("Alice", 10, 140f);
+            Adult adult_maria = Maria as Adult;
+
+            if(adult_maria == null)
+            {
+                Debug.Log("형변환 실패");
+            }
+            else
+            {
+                Debug.Log("형변환 성공");
+            }
+            
 
         }
 
